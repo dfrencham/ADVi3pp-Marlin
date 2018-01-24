@@ -35,9 +35,18 @@
 //
 // Limit Switches
 //
-#define X_STOP_PIN         54	// A0  (PF0)
+//#define X_STOP_PIN         54	// A0  (PF0) original
+
+// reconfigured due to broken pin
+#define X_STOP_PIN         34	//  (PC5)
+
 #define Y_STOP_PIN         24	// AD2 (PA2)
 #define Z_STOP_PIN         23	// AD1 (PA1)
+
+// use z-probe pin
+//#if ENABLED(BLTOUCH)
+#define SERVO0_PIN 37
+//#endif
 
 //
 // Steppers
